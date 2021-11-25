@@ -123,11 +123,11 @@ for j in range(1,r+1):
         user=i
         k=4
         su=4
-        cosim_matrix=create_cossim_matrix(data)
-        closest_user_table=create_closest_user_table(cosim_matrix)
-        favourires_table=create_favourites_table(data)
-        recommender_table=create_recommender_table(favourires_table,closest_user_table,k,su)
-        next_movie,rating,counter=pick_check_and_rate_movie(user,data,recommender_table,k,su)
+        cosim_matrix = create_cossim_matrix(data)
+        closest_user_table = create_closest_user_table(cosim_matrix)
+        favourires_table = create_favourites_table(data)
+        recommender_table = create_recommender_table(favourires_table,closest_user_table,k,su)
+        next_movie, rating, counter = pick_check_and_rate_movie(user,data,recommender_table,k,su)
         if counter==5:
             continue
         data=create_entry(user,next_movie,rating,data)
